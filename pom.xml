@@ -2,6 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -11,8 +16,11 @@
 	<groupId>com.example</groupId>
 	<artifactId>kbw</artifactId>
 	<version>1.0</version>
+	<packaging>jar</packaging>
 	<name>kbw</name>
 	<description>KBW QnA</description>
+	
+	
 	
 	
 	
@@ -27,6 +35,10 @@
     <artifactId>jquery</artifactId>
     <version>3.4.0</version>
 </dependency>
+
+
+
+
 
 
 
@@ -79,11 +91,17 @@
 	<build>
 		<plugins>
 		
-	<!-- 	<plugin>
+		
+		
+		
+		
+		
+		
+	 	<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.2.0</version>
-</plugin>   -->
+</plugin>   
 
 
 		
