@@ -74,7 +74,16 @@
 		
 		
 <!-- 이거 있음댐-->
-		<dependency>
+
+
+
+		
+		
+		
+		
+		
+		
+				<dependency>
 
 			<groupId>org.apache.maven.plugins</groupId>
 
@@ -104,9 +113,12 @@
 </plugin>   
 
 
-		
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
+		
+
+
+		
+		<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
