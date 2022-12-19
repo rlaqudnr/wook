@@ -82,22 +82,19 @@
 		
 		
 		
-		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+	
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
 <dependency>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.2.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
-
-
 
 		
-	</dependencies>
+	<!-- 이거 있음댐--</dependencies>
 
 	<build>
-		<plugins>
+		<plugins>-->
 		
 		
 		
