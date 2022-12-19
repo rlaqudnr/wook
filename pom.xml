@@ -75,13 +75,6 @@
 		
 <!-- 이거 있음댐-->
 
-
-
-		
-		
-		
-		
-		
 	
 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
 <dependency>
@@ -91,9 +84,12 @@
 </dependency>
 
 		
-	<!-- 이거 있음댐--></dependencies>
+	
+	
+	</dependencies>
 
 	<build>
+	
 		<plugins>
 		
 		
@@ -103,9 +99,12 @@
 		
 		
 		<plugin>
+		
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-resources-plugin</artifactId>
     <version>3.2.0</version>
+    
+    
 </plugin> 
 
 
@@ -119,6 +118,7 @@
 			</plugin>
 		</plugins>
 	</build>
+	
 	<repositories>
 		<repository>
 			<id>spring-milestones</id>
