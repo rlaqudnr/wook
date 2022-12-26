@@ -6,22 +6,37 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity //db랑 연결.
 public class User {
-	@Id
+	@Id // id속성 기본키로
 	@GeneratedValue
-	
 	private Long id;
 	
-	@Column(nullable=false, length = 20)
-	
-	
+	@Column(nullable=false, length = 20 ,unique =true )
 	private String userId;
-	public String getUserId() {
-		return userId;
+	
+
+	public Long getId() {
+		return id;
+	}
+	
+	public boolean matchId(Long newId) {
+		
+		if(newId == null) {
+			return false;
+	}
+		return newId.equals(id);
+		
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+	public String getUserId() {
+		return userId;
 	}
 	@Override
 	public String toString() {
@@ -33,6 +48,15 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public boolean matchPassword(String newPassword) {
+		
+		if(newPassword ==null) {
+			return false;
+		}
+		return newPassword.equals(password);
+	}
+	
+	
 	public String getName() {
 		return name;
 	}

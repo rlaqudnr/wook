@@ -20,10 +20,6 @@ import net.kbw.domain.UserRepository;
 @Controller
 @RequestMapping("/users")
 public class UserController {
-	
-	
-	
-	
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -70,6 +66,9 @@ public class UserController {
 		
 	}
 	
+	
+	
+	
 	@PostMapping("/login")
 	public String login(String userId,String password ,HttpSession session) {
 		
@@ -79,12 +78,12 @@ public class UserController {
 			return "redirect:/users/loginForm";
 			
 		}
-		if(password.equals(user.getPassword())) {
+		if(!user.matchPassword(password)) {
 			
 			return "redirect:/users/loginForm";
 		}
 		
-		session.setAttribute("user", user);
+		session.setAttribute(HttpSessionUtils.USER_SESSION_KEY, user);
 		return "redirect:/";
 		
 		
@@ -93,9 +92,21 @@ public class UserController {
 	
 	
 	
+@GetMapping("/logout")
+	
+	public String logout( HttpSession session) {
+		//model.addAttribute("users",users);
+		
+		 session.removeAttribute(HttpSessionUtils.USER_SESSION_KEY);
+		 
+			return "redirect:/";
+	
+
+}
+	
 	
 	@PostMapping("")
-	public String create(User user) {
+	public String create(User user ,HttpSession session) {
 	
 		
 		
@@ -104,8 +115,8 @@ public class UserController {
 		System.out.println(user);
 		
 		userRepository.save(user);
-		 
-		return "redirect:/user/list";
+		//session.setAttribute("user", user);
+		return "redirect:/";
 		
 		
 		
@@ -126,22 +137,31 @@ public class UserController {
 	
 	
 	@GetMapping("/{id}/form")
-	public String updateform(@PathVariable Long id,Model model) {
+	public String updateform(@PathVariable Long id,Model model ,HttpSession session) {
+//		if(HttpSessionUtils.isLoginUser(session)) {
+//			return "redirect:/users/loginForm";
+//		}     
 		
 		
+		 User suser = HttpSessionUtils.getUserFromSession(session);
+		 if(!suser.matchId(id)) {
+			 
+			  return "redirect:/";
+			  
+			  
+			 //throw new IllegalStateException("자산의 정보만 수정");
+			 
+			 
+		 }else {
+				User user =userRepository.findById(id).get();
+				
+				model.addAttribute("user",user);
+				
+				return "/user/updateform";
+			}
+		 }
+		 
 		
-	User user =userRepository.findById(id).get();
 	
-	System.out.println(user.toString());
-
-		model.addAttribute("user",user);
-		
-		return "/user/updateform";
-	}
-	
-	
-
-	
-
 	
 }
