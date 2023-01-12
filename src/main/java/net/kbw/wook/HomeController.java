@@ -27,9 +27,9 @@ public class HomeController {
 	@Autowired
 	private QuestionRepository questionRepository;
 	
-	//,size=5
+	
 	@GetMapping("")
-	public String home(Model model,@PageableDefault(sort="id",direction = Sort.Direction.DESC ) Pageable pageable,String keyword ) {
+	public String home(Model model,@PageableDefault(sort="id",direction = Sort.Direction.DESC ,size=5 ) Pageable pageable,String keyword ) {
 	
 	Serch serch = new Serch();
 			if(serch.Serch(keyword)) {
