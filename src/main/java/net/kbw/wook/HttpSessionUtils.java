@@ -23,6 +23,8 @@ public class HttpSessionUtils {
 		if(!isLoginUser(session)) {
 			return null;
 		}
+		
+		
 		return (User)session.getAttribute(USER_SESSION_KEY);
 		
 	}

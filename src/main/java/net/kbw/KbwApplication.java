@@ -18,7 +18,7 @@ public class KbwApplication {
 		SpringApplication.run(KbwApplication.class, args);
 		
 	
-		//SpringApplication.run(WelcomeController.class, args);
+		
 		
 		
 		
