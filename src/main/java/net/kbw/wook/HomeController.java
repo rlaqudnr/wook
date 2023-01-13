@@ -43,7 +43,7 @@ public class HomeController {
 	     
 	        model.addAttribute("hasNext",question.hasNext());
 	        model.addAttribute("hasPrev",question.hasPrevious());
-			model.addAttribute("keyword",keyword);
+			
 			  model.addAttribute("question",question);
 		
 		    if(question.getTotalPages() == 0) {
