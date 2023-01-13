@@ -1,6 +1,6 @@
-package net.kbw.wook;
+//package net.kbw.wook;
 
-import javax.servlet.http.HttpSession;
+//import javax.servlet.http.HttpSession;
 
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Controller;
