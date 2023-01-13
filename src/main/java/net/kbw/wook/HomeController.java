@@ -46,22 +46,22 @@ public class HomeController {
 			model.addAttribute("keyword",keyword);
 			  model.addAttribute("question",question);
 		
-		    if(question.getTotalPages() == 0) {
-		    	
-		    	Page<Question> questions = questionRepository.findAll(pageable);
-				
-				
-				model.addAttribute("question",questions);
-				model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
-		        model.addAttribute("next", pageable.next().getPageNumber());
-		     
-		        model.addAttribute("hasNext", question.hasNext());
-		        model.addAttribute("hasPrev", question.hasPrevious());
-				
-			    	return "/user/index";
-		    	
-			    	//
-		    }
+//		    if(question.getTotalPages() == 0) {
+//		    	
+//		    	Page<Question> questions = questionRepository.findAll(pageable);
+//				
+//				
+//				model.addAttribute("question",questions);
+//				model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
+//		        model.addAttribute("next", pageable.next().getPageNumber());
+//		     
+//		        model.addAttribute("hasNext", question.hasNext());
+//		        model.addAttribute("hasPrev", question.hasPrevious());
+//				
+//			    	return "/user/index";
+//		    	
+//			    	//
+//		    }
 		    return "/user/index";
 	
 		}else {
