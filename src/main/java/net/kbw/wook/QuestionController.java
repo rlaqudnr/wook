@@ -28,6 +28,8 @@ public class QuestionController {
 
 	@Autowired
 	private QuestionRepository questionRepository;
+	
+	@Autowired
 	private UserRepository userRepository;
 
 	// 글 상세보기
@@ -66,14 +68,7 @@ public class QuestionController {
 
 	}
 
-	private boolean hasPermission(HttpSession session) {
-
-		if (!HttpSessionUtils.isLoginUser(session)) {
-			throw new IllegalStateException("로그인이 필요합니다");
-		}
-
-		return true;
-	}
+	
 
 //글 수정하기 화면
 	@GetMapping("/{id}/update")
