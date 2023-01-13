@@ -15,64 +15,67 @@ import net.kbw.domain.Serch;
 
 @Controller
 
+
+
+//@PageableDefault(sort="id",direction = Sort.Direction.DESC ,size=5)Pageable pageable,String keyword)
 public class HomeController {
 	@Autowired
 	private QuestionRepository questionRepository;
 	
 	
 	@GetMapping("")
-	public String home(Model model,@PageableDefault(sort="id",direction = Sort.Direction.DESC ,size=5)Pageable pageable,String keyword) {
+	public String home(Model model) {
 	
-	Serch serch = new Serch();
-			if(serch.Serch(keyword)) {
-			
-		  Page<Question> question = questionRepository.findByTitleContaining(keyword,pageable);
-		
-			model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
-	        model.addAttribute("next", pageable.next().getPageNumber());
-	        
-	      
-	     
-	        model.addAttribute("hasNext",question.hasNext());
-	        model.addAttribute("hasPrev",question.hasPrevious());
-			model.addAttribute("keyword",keyword);
-			  model.addAttribute("question",question);
-		
-		    if(question.getTotalPages() == 0) {
-		    	
-		    	Page<Question> questions = questionRepository.findAll(pageable);
-				
-				
-				model.addAttribute("question",questions);
-				model.addAttribute("previous",pageable.previousOrFirst().getPageNumber());
-		        model.addAttribute("next",pageable.next().getPageNumber());
-		     
-		        model.addAttribute("hasNext",question.hasNext());
-		        model.addAttribute("hasPrev",question.hasPrevious());
-				
-			    	return "/user/index";
-		    	
-		    	
-		    }
-		    return "/user/index";
-	
-		}else {
-			
-		Page<Question> question = questionRepository.findAll(pageable);
-		
-		
-		model.addAttribute("question",question);
-		model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
-        model.addAttribute("next", pageable.next().getPageNumber());
-     
-        model.addAttribute("hasNext",question.hasNext());
-        model.addAttribute("hasPrev",question.hasPrevious());
-		//model.addAttribute("question",questionRepository.findAll());
+//	Serch serch = new Serch();
+//			if(serch.Serch(keyword)) {
+//			
+//		  Page<Question> question = questionRepository.findByTitleContaining(keyword,pageable);
+//		
+//			model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
+//	        model.addAttribute("next", pageable.next().getPageNumber());
+//	        
+//	      
+//	     
+//	        model.addAttribute("hasNext",question.hasNext());
+//	        model.addAttribute("hasPrev",question.hasPrevious());
+//			model.addAttribute("keyword",keyword);
+//			  model.addAttribute("question",question);
+//		
+//		    if(question.getTotalPages() == 0) {
+//		    	
+//		    	Page<Question> questions = questionRepository.findAll(pageable);
+//				
+//				
+//				model.addAttribute("question",questions);
+//				model.addAttribute("previous",pageable.previousOrFirst().getPageNumber());
+//		        model.addAttribute("next",pageable.next().getPageNumber());
+//		     
+//		        model.addAttribute("hasNext",question.hasNext());
+//		        model.addAttribute("hasPrev",question.hasPrevious());
+//				
+//			    	return "/user/index";
+//		    	
+//		    	
+//		    }
+//		    return "/user/index";
+//	
+//		}else {
+//			
+//		Page<Question> question = questionRepository.findAll(pageable);
+//		
+//		
+//		model.addAttribute("question",question);
+//		model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
+//        model.addAttribute("next", pageable.next().getPageNumber());
+//     
+//        model.addAttribute("hasNext",question.hasNext());
+//        model.addAttribute("hasPrev",question.hasPrevious());
+		model.addAttribute("question",questionRepository.findAll());
 		
 	return "/user/index";
 	
 	
-	}
+	
 			
 }
 	

@@ -43,34 +43,34 @@ public class AnswerController {
 
 	}
 
-	@GetMapping("/update")
-	public String update(@PathVariable Long Id, String contents) {
-
-		Answer answer = answerRepository.findById(Id).get();
-
-		answer.update(contents);
-
-		answerRepository.save(answer);
-
-		return "redirect:/questions/{id}";
-
-	}
-
-	@GetMapping("/updateform")
-	public String updateform(@PathVariable Long questionId, Model model) {
-
-		model.addAttribute("answers", answerRepository.findById(questionId).get());
-
-		return "/qna/AnswerForm";
-
-	}
-
-	@GetMapping("/delete")
-	public String delete(@PathVariable Long questionId) {
-
-		answerRepository.deleteById(questionId);
-
-		return "/";
-
-	}
+//	@GetMapping("/update")
+//	public String update(@PathVariable Long Id, String contents) {
+//
+//		Answer answer = answerRepository.findById(Id).get();
+//
+//		answer.update(contents);
+//
+//		answerRepository.save(answer);
+//
+//		return "redirect:/questions/{id}";
+//
+//	}
+//
+//	@GetMapping("/updateform")
+//	public String updateform(@PathVariable Long questionId, Model model) {
+//
+//		model.addAttribute("answers", answerRepository.findById(questionId).get());
+//
+//		return "/qna/AnswerForm";
+//
+//	}
+//
+//	@GetMapping("/delete")
+//	public String delete(@PathVariable Long questionId) {
+//
+//		answerRepository.deleteById(questionId);
+//
+//		return "/";
+//
+//	}
 }
