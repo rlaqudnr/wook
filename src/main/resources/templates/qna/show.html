@@ -115,28 +115,25 @@
                           <li>
                  
                               
-                              {{#no}}
+                             
                                <li class="link-modify-article"></li>
-                              {{/no}}
+                             
                               
-                                {{^no}}
-                                  <a class="link-modify-article" href="/questions/{{id}}/update">수정</a>
-                                  
-                                 
-                                {{/no}}
+                             
+                                  <a class="link-modify-article" href="/questions/{{id}}/update">수정</a>    
+                              
                           </li>
                           <li>
                               <form class="form-delete" action="/questions/{{id}}/delete" method="get">
                                     <input type="hidden" name="_method" value="DELETE">
                                  
                                  
-                                 
-                                  {{#no}}
+                                
                                   <li class="link-modify-article"></li>
-                                  {{/no}}
-                                {{^no}}
+                                
+                             
                                   <button class="link-delete-article" type="submit">삭제</button>
-                                {{/no}}
+                               
                                 
                                 
                               </form>
