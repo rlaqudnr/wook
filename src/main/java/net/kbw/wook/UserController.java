@@ -128,9 +128,9 @@ public class UserController {
 
 	public String list(Model model) {
 
-		List<User> users = userRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
+		List<User> users = userRepository.findAll(Sort.by(Sort.Direction.DESC,"id"));
 
-		model.addAttribute("users", users);
+		model.addAttribute("users",users);
 
 		return "/user/list";
 
