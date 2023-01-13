@@ -29,7 +29,7 @@ public class HomeController {
 	
 	
 	@GetMapping("")
-	public String home(Model model,@PageableDefault(sort="id",direction = Sort.Direction.DESC ,size=7 ) Pageable pageable,String keyword ) {
+	public String home(Model model ) {
 	
 //	Serch serch = new Serch();
 //			if(serch.Serch(keyword)) {
