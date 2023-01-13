@@ -38,22 +38,22 @@ public class QuestionController {
 		User sessionedUser = HttpSessionUtils.getUserFromSession(session);
 		Question question = questionRepository.findById(id).get();
 
-		//String no = "!";
+		String no = "!";
 
 		// 로그인이 안됐을때 수정,삭제를 못하게함
 		if (!HttpSessionUtils.isLoginUser(session)) {
 
-			//model.addAttribute("no", no);
+			model.addAttribute("no", no);
 			model.addAttribute("question", question);
 
 			return "/qna/show";
-			//
+
 		}
 
 		// 로그인은 했으나 작성자가 아닐때 수정,삭제를 못하게함
 		if (!question.isSameWriter(sessionedUser)) {
 
-			//model.addAttribute("no", no);
+			model.addAttribute("no", no);
 			model.addAttribute("question", question);
 
 			return "/qna/show";

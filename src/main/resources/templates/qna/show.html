@@ -96,13 +96,13 @@
                           <img src="https://graph.facebook.com/v2.3/100000059371774/picture" class="article-author-thumb" alt="">
                       </div>
                       <div class="article-header-text">
-                          <a href="/users/92/kimmunsu" class="article-author-name">{{#writer}}{{writer.userId}}{{/writer}}
+                          <a href="/users/92/kimmunsu" class="article-author-name">{{writer.userId}}
                                                                               
-                                                                                {{^writer}}N{{/writer}}
+                                                                              
                               </a>
                           <span  class="article-header-time" title="퍼머링크">
-                             {{#formatCreateDate}}  {{formatCreateDate}}  {{/formatCreateDate}}
-                              {{^formatCreateDate}}N{{/formatCreateDate}}
+                              {{formatCreateDate}}  
+                             
                               <i class="icon-link"></i>
                           </span>
                       </div>
@@ -115,25 +115,26 @@
                           <li>
                  
                               
-                             
+                              {{#no}}
                                <li class="link-modify-article"></li>
-                             
+                              {{/no}}
                               
-                             
+                                {{^no}}
                                   <a class="link-modify-article" href="/questions/{{id}}/update">수정</a>    
-                              
+                                {{/no}}
                           </li>
                           <li>
                               <form class="form-delete" action="/questions/{{id}}/delete" method="get">
                                     <input type="hidden" name="_method" value="DELETE">
                                  
                                  
-                                
+                                 
+                                  {{#no}}
                                   <li class="link-modify-article"></li>
-                                
-                             
+                                  {{/no}}
+                                {{^no}}
                                   <button class="link-delete-article" type="submit">삭제</button>
-                               
+                                {{/no}}
                                 
                                 
                               </form>
@@ -161,8 +162,8 @@
                                   <div class="article-header-text">
                                       <a href="/users/1/자바지기" class="article-author-name">{{writer.userId}}</a>
                                       <span  class="article-header-time" title="퍼머링크">
-                             {{#formatCreateDate}}  {{formatCreateDate}}  {{/formatCreateDate}}
-                              {{^formatCreateDate}}N{{/formatCreateDate}}
+                             {{formatCreateDate}}  
+                            
                               <i class="icon-link"></i>
                           </span>
                                   </div>
@@ -209,7 +210,7 @@
         {{/question}}
     </div>
 </div>
-
+<!--  
 <script type="text/template" id="answerTemplate">
 	<article class="article">
 		<div class="article-header">
@@ -239,7 +240,7 @@
 		</div>
 	</article>
 </script>
-
+ -->
 <!-- script references -->
 <script src="../js/jquery-2.2.0.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
