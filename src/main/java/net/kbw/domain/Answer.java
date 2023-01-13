@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Answer {
-	
+	//
 
 	@ManyToOne
 	@JoinColumn(foreignKey = @ForeignKey(name = "fk_answer_to_question"))

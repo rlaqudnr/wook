@@ -34,7 +34,7 @@ public class AnswerController {
 
 			return "/users/loginForm";
 		}
-
+		//
 		User loginUser = HttpSessionUtils.getUserFromSession(session);
 
 		Question question = questionRepository.findById(questionId).get();

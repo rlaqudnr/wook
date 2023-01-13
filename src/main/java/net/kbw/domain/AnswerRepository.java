@@ -6,7 +6,7 @@ public interface AnswerRepository extends JpaRepository<Answer, Long>{
 
 
 	
-	
+	//
 	
 
 }

@@ -1,5 +1,5 @@
 package net.kbw.domain;
-
+//
 import javax.persistence.Entity;
 import javax.transaction.Transactional;
 

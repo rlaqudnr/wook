@@ -60,7 +60,7 @@ public class HomeController {
 				
 			    	return "/user/index";
 		    	
-		    	
+			    	//
 		    }
 		    return "/user/index";
 	

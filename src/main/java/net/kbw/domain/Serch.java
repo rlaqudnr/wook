@@ -11,7 +11,7 @@ public class Serch {
 
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
-	}
+	}//
 
 	String keyword;
 	

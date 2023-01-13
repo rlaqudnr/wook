@@ -47,7 +47,7 @@ public class QuestionController {
 			model.addAttribute("question", question);
 
 			return "/qna/show";
-
+			//
 		}
 
 		// 로그인은 했으나 작성자가 아닐때 수정,삭제를 못하게함
