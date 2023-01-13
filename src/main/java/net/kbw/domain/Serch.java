@@ -16,16 +16,16 @@ public class Serch {
 //	String keyword;
 	
 	
- public boolean Serch(String keyword) {
-	 
-	 
-	 if(keyword==null) {
-		 return false;
-	 }
-
-	return true;
-	 
- }
+// public boolean Serch(String keyword) {
+//	 
+//	 
+//	 if(keyword==null) {
+//		 return false;
+//	 }
+//
+//	return true;
+//	 
+// }
 	
 	
 //@Override
