@@ -47,6 +47,7 @@ public class Answer {
 	private LocalDateTime createDate;
 
 	
+	@SuppressWarnings("unused")
 	private String contents;
 	public String getFormatCreateDate() {
 		if(createDate == null) {

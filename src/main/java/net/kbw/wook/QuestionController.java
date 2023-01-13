@@ -1,9 +1,5 @@
 package net.kbw.wook;
 
-import java.util.Optional;
-
-import javax.persistence.Entity;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import net.kbw.domain.AnswerRepository;
 import net.kbw.domain.Question;
 import net.kbw.domain.QuestionRepository;
 import net.kbw.domain.User;
@@ -29,6 +23,7 @@ public class QuestionController {
 	@Autowired
 	private QuestionRepository questionRepository;
 	
+	@SuppressWarnings("unused")
 	@Autowired
 	private UserRepository userRepository;
 
@@ -98,6 +93,7 @@ public class QuestionController {
 
 	public String delete(@PathVariable Long id, HttpSession session, Model model) {
 
+		@SuppressWarnings("unused")
 		Question question = questionRepository.findById(id).get();
 
 		questionRepository.deleteById(id);

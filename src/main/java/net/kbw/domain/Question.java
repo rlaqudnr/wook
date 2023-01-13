@@ -3,9 +3,7 @@ package net.kbw.domain;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.Objects;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -34,6 +32,7 @@ public class Question {
 	
 	
 	
+	@SuppressWarnings("unused")
 	private String title;
 	@Lob
 	private String contents;
@@ -86,6 +85,7 @@ public String getFormatCreateDate() {
 	
 	return createDate.format(DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss"));
 }
+
 
 
 

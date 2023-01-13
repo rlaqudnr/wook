@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import net.kbw.domain.Question;
 import net.kbw.domain.User;
 import net.kbw.domain.UserRepository;
 

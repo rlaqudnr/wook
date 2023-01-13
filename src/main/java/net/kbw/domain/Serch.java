@@ -1,7 +1,5 @@
 package net.kbw.domain;
 
-import java.util.Objects;
-
 public class Serch {
 //	public String getKeyword(String keyword) {
 //		
