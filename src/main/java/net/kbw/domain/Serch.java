@@ -16,7 +16,7 @@ public class Serch {
 	String keyword;
 	
 	
- public boolean Serch(String keyword) {
+ public boolean Serch(Object keyword) {
 	 
 	 if(keyword==null) {
 		 return false;
