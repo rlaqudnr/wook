@@ -25,6 +25,7 @@ public class HomeController {
 	
 	Serch serch = new Serch();
 			if(serch.Serch(keyword)) {
+				System.out.println("ㄳ");
 			
 		  Page<Question> question = questionRepository.findByTitleContaining(keyword,pageable);
 		
@@ -33,11 +34,11 @@ public class HomeController {
 	        
 	        model.addAttribute("hasNext",question.hasNext());
 	        model.addAttribute("hasPrev",question.hasPrevious());
-			model.addAttribute("keyword",keyword);
+		
 			model.addAttribute("question",question);
 		
 		    if(question.getTotalPages() == 0) {
-		    	
+		    	System.out.println("ㄳ2");
 		    	Page<Question> questions = questionRepository.findAll(pageable);
 				
 				
@@ -45,8 +46,8 @@ public class HomeController {
 				model.addAttribute("previous",pageable.previousOrFirst().getPageNumber());
 		        model.addAttribute("next",pageable.next().getPageNumber());
 		     
-		        model.addAttribute("hasNext",question.hasNext());
-		        model.addAttribute("hasPrev",question.hasPrevious());
+		        model.addAttribute("hasNext",questions.hasNext());
+		        model.addAttribute("hasPrev",questions.hasPrevious());
 				
 			    	return "/user/index";
 		    	
@@ -55,7 +56,7 @@ public class HomeController {
 		    return "/user/index";
 	
 		}else {
-			
+			System.out.println("ㄳ1");
 		Page<Question> question = questionRepository.findAll(pageable);
 		
 		
