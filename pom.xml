@@ -105,13 +105,10 @@
 	
 	</dependencies>
 
-	<build>
 	
-		<plugins>
 		
 		
-		
-	
+		<!-- 
 		
 		<plugin>
 		
@@ -121,8 +118,11 @@
     
     
 </plugin> 
-
+ -->
 		
+	<build>
+	
+		<plugins>
 
 			<plugin>
 		
