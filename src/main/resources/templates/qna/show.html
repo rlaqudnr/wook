@@ -113,42 +113,27 @@
                   </div>
                   <div class="article-util">
                       <ul class="article-util-list">
-                          <li>
+                         
                  
-                       
-                          
-                              {{#no}}
-                               <li class="link-modify-article"></li>
-                              {{/no}}
                               
                                 {{^no}}
-                                  <a class="link-modify-article" href="/questions/{{id}}/update">수정</a>    
-                                {{/no}}
-                          </li>
-                          <li>
+                             <a class="link-modify-article" href="/questions/{{id}}/update">수정</a> 
+                 
+               
                               <form class="form-delete" action="/questions/{{id}}/delete" method="get">
                                     <input type="hidden" name="_method" value="DELETE">
-                                 
-                                 
-                                 
-                                  {{#no}}
-                                  <li class="link-modify-article"></li>
-                                  {{/no}}
-                                {{^no}}
-                                  <button class="link-delete-article" type="submit">삭제</button>
-                                {{/no}}
-                             
                                 
+                                <button class="link-delete-article" type="submit">삭제</button>
+                                {{/no}}
+                            
                               </form>
-                          </li>
-                          <li>
-                           
-                              <a class="link-modify-article" href="/">목록</a>
-                          </li>
+                        
+                       
+                             <a class="link-modify-article" href="/">목록</a>
+                         
                       </ul>
                   </div>
-              </article>
-
+              
  
  
               <div class="qna-comment">
