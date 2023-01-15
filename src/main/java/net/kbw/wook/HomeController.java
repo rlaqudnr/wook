@@ -31,12 +31,10 @@ public class HomeController {
 			model.addAttribute("previous", pageable.previousOrFirst().getPageNumber());
 	        model.addAttribute("next", pageable.next().getPageNumber());
 	        
-	      
-	     
 	        model.addAttribute("hasNext",question.hasNext());
 	        model.addAttribute("hasPrev",question.hasPrevious());
 			model.addAttribute("keyword",keyword);
-			  model.addAttribute("question",question);
+			model.addAttribute("question",question);
 		
 		    if(question.getTotalPages() == 0) {
 		    	

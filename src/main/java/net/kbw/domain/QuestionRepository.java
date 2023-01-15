@@ -16,14 +16,6 @@ public interface QuestionRepository extends JpaRepository<Question, Long>{
 	
 	
 	
-//	 @Query("SELECT p FROM Article p ORDER BY p.id DESC")
-//	    List findAllDesc();
-//
-//	Object findAllDesc(java.util.List<Question> questionList);
-//	
-	
-	
-	
 	}
 
 
