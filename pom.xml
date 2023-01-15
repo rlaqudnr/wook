@@ -90,25 +90,7 @@
 		</dependency>
 		
 		
-<!-- 이거 있음댐-->
-
-	
-<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-resources-plugin</artifactId>
-    <version>3.2.0</version>
-</dependency>
-
-		
-	
-	
-	</dependencies>
-
-	
-		
-		
-		<!-- 
+			<!-- 
 		
 		<plugin>
 		
@@ -119,6 +101,27 @@
     
 </plugin> 
  -->
+		
+		
+		
+<!-- 이거 있음댐-->
+
+	
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.3.0</version>
+</dependency>
+
+		
+	
+	
+	</dependencies>
+
+	
+	
 		
 	<build>
 	
