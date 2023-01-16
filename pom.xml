@@ -18,14 +18,9 @@
 	<name>kbw</name>
 	<description>KBW QnA</description>
 	
-	
-	
-	
-	
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-	
 	
 	<dependencies>
 	<dependency>
@@ -33,7 +28,6 @@
     <artifactId>jquery</artifactId>
     <version>3.4.0</version>
 </dependency>
-
 
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
