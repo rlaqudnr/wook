@@ -11,7 +11,7 @@ public interface AnswerRepository extends JpaRepository<Answer, Long>{
 	void deleteBywriter_id(Long id);
 
 
-
+	//
 	
 
 
