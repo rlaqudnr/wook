@@ -26,7 +26,7 @@ public interface QuestionRepository extends JpaRepository<Question, Long>{
 	void deleteBywriter_id(Long id); // 게시물 삭제
 
 
-	
+	//
 	
 	}
 
