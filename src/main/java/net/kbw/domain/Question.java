@@ -64,7 +64,7 @@ public class Question {
 	public boolean isSameWriter(User sessionedUser) {
 		return this.writer.equals(sessionedUser);
 	}
-
+	//
 	@Override
 	public int hashCode() {
 		final int prime = 31;
