@@ -47,7 +47,7 @@ public class UserController {
 			// 로그인이 안됐을때 로그인폼으로
 			return "/users/loginForm";
 		}
-
+		//
 		if (!suser.matchId(id)) {
              
 			return "redirect:/";
