@@ -3,6 +3,7 @@ package net.kbw.domain;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
@@ -10,30 +11,30 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.springframework.data.jpa.repository.Query;
+
 @Entity
 public class Answer {
-	//
-
+	
+    //게시글과 N:1 관계
 	@ManyToOne
-	@JoinColumn(foreignKey = @ForeignKey(name = "fk_answer_to_question"))
+	@JoinColumn(name = "fk_answer_to_question")
 	private Question question;
-	
-	
 
 	public Answer() {
-		
-	}
-	
 
-	public Answer(User writer,String contents,Question question) {
-		this.question =question;
-		this.writer=writer;
-		this.contents=contents;
-		this.createDate=LocalDateTime.now();
 	}
-	
-	
 
+	public Answer(User writer, String contents, Question question) {
+		this.question = question;
+		this.writer = writer;
+		this.contents = contents;
+		this.createDate = LocalDateTime.now();
+	}
+
+	public boolean isSameWriter(User SessionedUser) {
+		return this.writer.equals(SessionedUser);
+	}
 
 	@Id
 	@GeneratedValue
@@ -42,25 +43,20 @@ public class Answer {
 	@ManyToOne
 	@JoinColumn(foreignKey = @ForeignKey(name = "fk_answer_writer"))
 	private User writer;
-	
-	
+
 	private LocalDateTime createDate;
 
 	
-	@SuppressWarnings("unused")
 	private String contents;
+
 	public String getFormatCreateDate() {
-		if(createDate == null) {
+		if (createDate == null) {
 			return "";
 		}
-		
+
 		return createDate.format(DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss"));
 	}
-	
-	
 
-	
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,10 +64,7 @@ public class Answer {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-	
-	
-	
-	
+
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -88,14 +81,16 @@ public class Answer {
 		return true;
 	}
 
-
 	public void update(String contents) {
-   
-		this.contents=contents;
 
-		
+		this.contents = contents;
+
 	}
-	
-}
 
-	
+	public boolean isSameWriter(String userid) {
+
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -33,6 +33,9 @@ body {
 .btn-danger,.label-danger,.progress-bar-danger{background-color:#dd4b39;}
 .btn-warning,.label-warning,.progress-bar-warning{background-color:#f4b400;color:#444444;}
 
+#overlappedID {background-color: GhostWhite; width: 15%; height: 40px;}
+.olmessagef {color: red; font-style: Italic;}
+.olmessaget {color: blue; font-style: Italic;}
 
 
 hr {border-color:#ececec;}
