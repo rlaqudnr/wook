@@ -15,7 +15,7 @@ import org.springframework.data.jpa.repository.Query;
 
 @Entity
 public class Answer {
-	
+	//
     //게시글과 N:1 관계
 	@ManyToOne
 	@JoinColumn(name = "fk_answer_to_question")
