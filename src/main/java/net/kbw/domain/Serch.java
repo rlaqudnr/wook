@@ -3,7 +3,7 @@ package net.kbw.domain;
 import java.util.Objects;
 
 
-//검색을 한지 안한지 확인하는 클래스
+//검색을 한지 안한지 확인하는 클래스//
 public class Serch {
 	public String getKeyword(String keyword) {
 
