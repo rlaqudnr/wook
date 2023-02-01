@@ -20,7 +20,7 @@ public class HttpSessionUtils {
 			return false;
 		}
 		return true;
-
+		//
 	}
 
 	//로그인 했으면 현재 세션을 리턴함
