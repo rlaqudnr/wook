@@ -25,7 +25,7 @@ public class QuestionController {
 
 	@Autowired
 	private QuestionRepository questionRepository;
-
+	//
 
 	// 글 상세보기
 
