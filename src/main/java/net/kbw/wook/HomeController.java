@@ -49,7 +49,7 @@ public class HomeController {
 			return "/user/index";
 
 		} else {
-
+			//
 			//게시글 리스트를 보여준다. serch class에 값이 없을경우 일반 페이징 화면이 나옴
 			Page<Question> question = questionRepository.findAll(pageable);
 
